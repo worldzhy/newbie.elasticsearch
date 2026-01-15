@@ -25,7 +25,10 @@ export class ElasticsearchService extends Client {
         pRetry(() => this.indexRecord(index, record, params), {
           retries: this.configService.get<number>('microservices.elasticsearch.retries') ?? 3,
           onFailedAttempt: error => {
-            this.logger.error(`Indexing record failed, retrying (${error.retriesLeft} attempts left)`, error.name);
+            this.logger.error(
+              `Indexing record failed, retrying (${error.retriesLeft} attempts left)`,
+              error.error.name
+            );
           },
         })
       )
