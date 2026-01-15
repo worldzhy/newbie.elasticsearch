@@ -11,11 +11,10 @@
     "ELASTICSEARCH_USERNAME": "",
     "ELASTICSEARCH_PASSWORD": ""
   },
-  "dependencies": { 
+  "dependencies": {
     "@elastic/elasticsearch": "7.13.0",
-    "p-queue": "^6.6.2",
-    "p-retry": "^4.6.2"
+    "p-queue": "latest",
+    "p-retry": "latest"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
